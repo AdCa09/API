@@ -1,0 +1,5 @@
+/vendor/
+/mysql-data/
+/php.ini/
+apache.config/
+/apache.conf/

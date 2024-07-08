@@ -1,0 +1,14 @@
+{
+    "name": "adri/api",
+    "autoload": {
+        "psr-4": {
+            "Adri\\Api\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AdCa09"
+        }
+    ],
+    "require": {}
+}
