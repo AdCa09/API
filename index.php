@@ -1,39 +1,39 @@
+<?php
+require "config/connexionDB.php";
 
 
+require_once __DIR__ . "/helpers/core.php";
+require_once __DIR__ . "/helpers/request.php";
 
-require_once "controllers/delete.php";
-require_once "controllers/getAll.php";
-require_once "controllers/getById.php";
-require_once "controllers/post.php";
-require_once "controllers/update.php";
+$method = $_SERVER['REQUEST_METHOD'];
 
+$url = parse_url($_SERVER['REQUEST_URI']);
+$path = $url['path'];
 
-function route($request_method, $path){
-
-    switch($request_method){
-        case 'DELETE':
-            return deleteController($path);
-            break;
-
-        case "GET":
-            if($path === '/'){
-                return getController();
-            }elseif (preg_match('/^\/(\d+)$/', $path, $matches)){
-                $id = $matches[1];
-                return getByIdController($id);
-                
-            }else{
-                return null;
-                break;
-            }
-        case "POST":
-            return postController();
-            break;
-        case "PATCH":
-            return updateController();
-            break;
-        default:
-           return null;
-           break;
-    }
+switch ($path) {
+    case '/delete':
+        if ($method === 'DELETE') {
+            require_once __DIR__ . '/controllers/delete.php';
+        }
+        break;
+    case '/getAll':
+        if ($method === 'GET') {
+            require_once __DIR__ . '/controllers/getAll.php';
+        } 
+        break;
+    case '/getById' :
+        if($method === 'GET'){
+            require_once __DIR__ . '/controllers/getById.php';
+        }
+        break;
+    case '/createPost':
+        if($method === 'POST'){
+            require_once __DIR__ . '/controllers/createPost.php';
+        }
+        break;
+    case '/update':
+        if($method === 'PUT'){
+            require_once __DIR__ . '/controllers/update.php';
+        }
+        break;
 }

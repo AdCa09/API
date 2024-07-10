@@ -10,5 +10,7 @@
             "name": "AdCa09"
         }
     ],
-    "require": {}
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
 }
