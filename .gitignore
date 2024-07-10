@@ -1,5 +1,11 @@
 /vendor/
 /mysql-data/
 /php.ini/
-apache.config/
+/apache.config/
 /apache.conf/
+.env
+.htaccess
+.composer.json
+.composer.lock
+.docker-compose.yml
+
