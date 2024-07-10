@@ -3,9 +3,11 @@
 /php.ini/
 /apache.config/
 /apache.conf/
+
 .env
-.htaccess
-.composer.json
-.composer.lock
-.docker-compose.yml
+
+htaccess
+composer.json
+composer.lock
+docker-compose.yml
 
