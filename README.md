@@ -1,24 +1,23 @@
-# API PHP basée sur le modèle MVC (sans Vue)
+# PHP API Based on the MVC Model (Without View)
 
 ## Description
 
-Cette API a été développée dans le cadre de notre cours sur PHP. Elle suit le modèle MVC, bien que la partie "Vue" soit absente, l'accent étant mis uniquement sur le Contrôleur et le Modèle. L'API permet de réaliser des opérations CRUD (Create, Read, Update, Delete) sur une ressource spécifique.
+This API was developed as part of our PHP course. It follows the MVC model, although the "View" part is absent, with a focus solely on the Controller and Model. The API allows for CRUD (Create, Read, Update, Delete) operations on a specific resource.
 
-## Fonctionnalités
+## Features
 
-L'API supporte les opérations suivantes :
+The API supports the following operations:
 
-- **GET /resource** : Récupère tous les éléments de la ressource.
-- **GET /resource/{id}** : Récupère un élément spécifique en utilisant son `id`.
-- **POST /resource** : Crée un nouvel élément de la ressource.
-- **PUT /resource/{id}** : Met à jour un élément existant basé sur son `id`.
-- **DELETE /resource/{id}** : Supprime un élément spécifique en utilisant son `id`.
+- **GET /resource**: Retrieves all items of the resource.
+- **GET /resource/{id}**: Retrieves a specific item using its `id`.
+- **POST /resource**: Creates a new item for the resource.
+- **PUT /resource/{id}**: Updates an existing item based on its `id`.
+- **DELETE /resource/{id}**: Deletes a specific item using its `id`.
 
-## Structure du Projet
+## Project Structure
 
-Le projet suit une architecture MVC :
+The project follows an MVC architecture:
 
-- **Modèle (Model)** : Contient la logique de l'application, notamment les interactions avec la base de données.
-- **Contrôleur (Controller)** : Gère les requêtes HTTP et envoie les réponses appropriées.
-- **Pas de Vue (View)** : Cette API n'inclut pas de vue, étant destinée à une utilisation directe par des clients (comme un frontend ou un autre service).
-
+- **Model**: Contains the application logic, particularly interactions with the database.
+- **Controller**: Handles HTTP requests and sends appropriate responses.
+- **No View**: This API does not include a view, as it is intended for direct use by clients (such as a frontend or another service).
